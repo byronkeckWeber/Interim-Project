@@ -5,7 +5,7 @@ import './App.css'
 
 
 function App() {
-  const [sleeps, setSleeps] = useState();
+  const [sleeps, setSleeps] = useState([]);
 
   const addSleepHandler = (sleep) => {
     setSleeps((prevSleeps) => [sleep, ...prevSleeps]);

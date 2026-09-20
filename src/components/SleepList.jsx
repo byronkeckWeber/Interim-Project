@@ -11,7 +11,7 @@ function SleepList(props) {
     }
 
     const filteredSleeps = props.items.filter((sleep) => {
-        if (filterType === 'All')
+        if (filterRestfulness === 'All')
             return true;
         return sleep.restfulness === filterRestfulness;
     });

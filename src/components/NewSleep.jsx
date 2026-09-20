@@ -4,15 +4,15 @@ function NewSleep(props) {
     const saveSleepDataHandler = (enteredSleepData) => {
         const sleepData = {
             ...enteredSleepData,
-            id: startTime
+            id: Date.now().toString()
         }
 
-        props.onAddSleep
+        props.onAddSleep(sleepData);
     }
 
     return (
         <div>
-            <SleepForm onAddSleep={saveSleepDataHandler}/>
+            <SleepForm onSaveSleepData={saveSleepDataHandler}/>
         </div>
     );
 }

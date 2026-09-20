@@ -18,7 +18,7 @@ function SleepForm(props) {
             restfulness: enteredRestfulness
         }
 
-        props.onSaveSleepData(SleepData);
+        props.onSaveSleepData(sleepData);
 
         setEnteredStartTime('');
         setEnteredEndTime('');
