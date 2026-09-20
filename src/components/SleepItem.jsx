@@ -9,7 +9,7 @@ function formatDuration(minutes) {
 function SleepItem(props) {
     return (
         <div className="card">
-            <h3>Start Time: {props.startTime}</h3>
+            <p className="start_time">Start Time: {props.startTime}</p>
             <p>End Time: {props.endTime}</p>
             <p>Duration:  {formatDuration(props.duration)}</p>
             <p>They woke up {props.wakeUpAmount} times</p>
