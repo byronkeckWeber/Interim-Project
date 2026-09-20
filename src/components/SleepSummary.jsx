@@ -15,7 +15,12 @@ function SleepSummary(props) {
     return (
         <div>
             <h3>Summary</h3>
-            <p>Wakeup Method: {props.type}</p>
+            <p>Wakeup Method: { props.type === "Himself" ?
+            ("Themself.") : (props.type === "WokeHimUp" ?
+                ("You.") : (props.type === "LoudNoise" ?
+                    ("a loud noise.") : (props.type === "All" ?
+                        ("All") : ("something else.")
+            )))}</p>
             <p>Amount of times slept: {amount}</p>
             <p>Total time slept: {formatDuration(total)}</p>
         </div>
