@@ -29,6 +29,7 @@ function SleepList(props) {
                 key={sleep.id}
                 startTime={sleep.startTime}
                 endTime={sleep.endTime}
+                duration={sleep.duration}
                 wakeUpAmount={sleep.wakeUpAmount}
                 wakeUpMethod={sleep.wakeUpMethod}
                 restfulness={sleep.restfulness}
