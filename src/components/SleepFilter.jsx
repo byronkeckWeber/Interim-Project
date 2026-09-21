@@ -5,7 +5,7 @@ function SleepFilter(props) {
 
     return (
         <div>
-            <label>Filter by Wake up Methods</label>
+            <label>Filter by Wake up Methods  </label>
             <select onChange={dropDownChangeHandler} value={props.selected}>
                 <option value="All">All</option>
                 <option value="Himself">They woke up by themselves.</option>

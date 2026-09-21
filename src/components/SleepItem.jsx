@@ -7,8 +7,20 @@ function formatDuration(minutes) {
 }
 
 function SleepItem(props) {
+    const SleptCLickHandler = (event) => {
+        props.onToggleSlept();
+    }
     return (
-        <div className="card">
+        <div className="card" onClick={props.onDelete}>
+            <div className="SleptToggle">
+                <button
+                    className="Sleep_Button"
+                    onClick={SleptCLickHandler}
+                    aria-label="Toggle your sleep">
+                        {props.iSlept ? "★" : "☆"}
+                </button>
+                <span>NEW FUNCTION: Toggle if you slept as well</span>
+            </div>
             <p className="start_time">Start Time: {props.startTime}</p>
             <p>End Time: {props.endTime}</p>
             <p>Duration:  {formatDuration(props.duration)}</p>
@@ -19,6 +31,7 @@ function SleepItem(props) {
                     ("a loud noise.") : ("something else.")
             ))}</p>
             <p>Their sleep was: {props.restfulness}</p>
+            <p className="delete">Click anywhere on this card to delete it!</p>
         </div>
     );
 }

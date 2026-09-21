@@ -6,9 +6,21 @@ function SleepForm(props) {
     const [enteredWakeUpAmount, setEnteredWakeUpAmount] = useState('');
     const [enteredWakeUpMethod, setEnteredWakeUpMethod] = useState('Himself');
     const [enteredRestfulness, setEnteredRestfulness] = useState('Normal');
+    const [error, setError] = useState('');
 
     const submitHandler = (event) => {
         event.preventDefault();
+
+        const startBlank = enteredStartTime.trim() === '';
+        const endBlank = enteredEndTime.trim() === '';
+        const amountBlank = enteredWakeUpAmount.toString().trim() === '';
+
+        if (startBlank || endBlank || amountBlank) {
+            setError("Please fill out the sleep's start time, end time, and amount of times they woke up before submitting.");
+            return;
+        }
+
+        setError('')
 
         const sleepData = {
             startTime: enteredStartTime,
@@ -27,8 +39,13 @@ function SleepForm(props) {
         setEnteredRestfulness('Normal');
     }
 
+    const startBlank = error && enteredStartTime.trim() === '';
+    const endBlank = error && enteredEndTime.trim() === '';
+    const amountBlank = error && enteredWakeUpAmount.toString().trim() === '';
+
     return (
         <form className="card" onSubmit={submitHandler}>
+            {error && <p className="error-message"> {error}</p>}
             <div className="form-style">
                 <label>Start Time</label>
                 <input type="time"
@@ -45,6 +62,7 @@ function SleepForm(props) {
                 <label>How many times did they wake up?</label>
                 <input type="number"
                 value={enteredWakeUpAmount}
+                min={0}
                 onChange={(e) => setEnteredWakeUpAmount(e.target.value)}/>
             </div>
             <div className="form-style">

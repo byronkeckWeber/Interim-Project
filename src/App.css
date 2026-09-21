@@ -1,3 +1,5 @@
+/*AI was used to come up with colors that will look good together.
+And w3Schools helped me find how to select labels and the input in the forms.*/
 body {
   background-color: #eaf6ff;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -64,4 +66,35 @@ button {
 .start_time {
   font-size: 2em;
   font-weight: bold;
+}
+
+.error-message {
+  background-color: #ffe5e5;
+  color: #b33a3a;
+  border: 1px solid #f5b5b5;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.sleep-item:hover {
+  background-color: #e4f3fc;
+}
+
+.delete-hint {
+  font-size: 0.75rem;
+  color: #7a9bb0;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.Sleep_Button{
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #4ca3d9;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
 }

@@ -19,6 +19,7 @@ function NewSleep(props) {
         const sleepData = {
             ...enteredSleepData,
             duration: calculateDuration(enteredSleepData.startTime, enteredSleepData.endTime),
+            iSlept: false,
             id: Date.now().toString()
         }
 

@@ -33,6 +33,9 @@ function SleepList(props) {
                 wakeUpAmount={sleep.wakeUpAmount}
                 wakeUpMethod={sleep.wakeUpMethod}
                 restfulness={sleep.restfulness}
+                iSlept={sleep.iSlept}
+                onDelete={() => props.onDeleteSleep(sleep.id)}
+                onToggleSlept={() => props.onToggleSlept(sleep.id)}
                 />
             )))}
         </div>
