@@ -8,6 +8,7 @@ function formatDuration(minutes) {
 
 function SleepItem(props) {
     const SleptCLickHandler = (event) => {
+        event.stopPropagation();
         props.onToggleSlept();
     }
     return (
@@ -19,7 +20,7 @@ function SleepItem(props) {
                     aria-label="Toggle your sleep">
                         {props.iSlept ? "★" : "☆"}
                 </button>
-                <span>NEW FUNCTION: Toggle if you slept as well</span>
+                <span>NEW FUNCTION: Toggle with the star if you slept as well</span>
             </div>
             <p className="start_time">Start Time: {props.startTime}</p>
             <p>End Time: {props.endTime}</p>
