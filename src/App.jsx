@@ -11,16 +11,27 @@ function App() {
     setSleeps((prevSleeps) => [sleep, ...prevSleeps]);
   };
 
-  const clickHandler = (title) => {
-    console.log("SLeep clicked: " + startTime);
+  const deleteSleephandler = (id) => {
+    setSleeps((prevSleeps) => prevSleeps.filter((sleep) => sleep.id !== id));
   };
+
+  const toggleSleptHandler = (id) => {
+    setSleeps((prevSleeps) =>
+    prevSleeps.map((sleep) =>
+    sleep.id === id ? { ...sleep, iSlept: !sleep.iSlept } : sleep));
+  };
+
 
   return (
     <div>
       <h1>Sleep Tracker for an infant</h1>
 
       <NewSleep onAddSleep={addSleepHandler}/>
-      <SleepList items = {sleeps}/>
+      <SleepList
+        items = {sleeps}
+        onDeleteSleep={deleteSleephandler}
+        onToggleSlept={toggleSleptHandler}
+      />
     </div>
   )
 }
