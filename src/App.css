@@ -101,12 +101,12 @@ button {
 
 .SleptToggle {
   display: flex;
-     align-items: center;
-     gap: 0.5rem;
-     margin-bottom: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.SleptToggle{
+.iSlept-badge {
   background-color: #4ca3d9;
   color: white;
   font-size: 0.7rem;
