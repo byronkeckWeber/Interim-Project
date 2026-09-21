@@ -91,12 +91,16 @@ button {
 
 .Sleep_Button{
   background: none;
-  border: none;
   font-size: 1.4rem;
   color: #4ca3d9;
   cursor: pointer;
   padding: 0;
   line-height: 1;
+}
+
+.Sleep_Button:hover {
+  background-color: #4ca3d9;
+  color: white;
 }
 
 .SleptToggle {

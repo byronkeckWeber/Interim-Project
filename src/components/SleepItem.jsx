@@ -18,8 +18,8 @@ function SleepItem(props) {
                     className="Sleep_Button"
                     onClick={SleptCLickHandler}
                     aria-label="Toggle your sleep">
-                        {props.iSlept ? "★ Toggle if you slept as well or not" :
-                         "☆ Toggle if you slept as well or not"}
+                        {props.iSlept ? "NEW FEATURE ★ Toggle if you slept as well or not" :
+                         "NEW FEATURE ☆ Toggle if you slept as well or not"}
                 </button>
             </div>
             <p className="start_time">Start Time: {props.startTime}</p>
