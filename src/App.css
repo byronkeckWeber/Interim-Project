@@ -106,7 +106,7 @@ button {
      margin-bottom: 0.5rem;
 }
 
-.SleptToggle span {
+.SleptToggle{
   background-color: #4ca3d9;
   color: white;
   font-size: 0.7rem;
