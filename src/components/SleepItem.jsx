@@ -11,7 +11,7 @@ function SleepItem(props) {
         props.onToggleSlept();
     }
     return (
-        <div className="card" onClick={props.onDelete}>
+        <div className="card sleep-item" onClick={props.onDelete}>
             <div className="SleptToggle">
                 <button
                     className="Sleep_Button"

@@ -20,7 +20,7 @@ function SleepList(props) {
         <div className="card">
             <h2>Sleep Log</h2>
             <SleepFilter onChangeFilter={filterChangeHandler}/>
-            <SleepSummary items = {filteredSleeps} type = {filterRestfulness}/>
+            <SleepSummary items = {filteredSleeps} type = {filterRestfulness} selected={filterRestfulness}/>
 
             {filteredSleeps.length === 0 ?
             (<p>No sleeps found.</p>) :

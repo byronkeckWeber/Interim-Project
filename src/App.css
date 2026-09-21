@@ -98,3 +98,20 @@ button {
   padding: 0;
   line-height: 1;
 }
+
+.SleptToggle {
+  display: flex;
+     align-items: center;
+     gap: 0.5rem;
+     margin-bottom: 0.5rem;
+}
+
+.SleptToggle span {
+  background-color: #4ca3d9;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
